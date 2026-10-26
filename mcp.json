@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "hashkey-crosschain-bridge-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "HACKATHON_TRACK": "HashKey Chain",
+        "PROJECT_TICKER": "HKBRIDGE"
+      },
+      "tools": [
+        {
+          "name": "verify_hkbridge_invariants",
+          "description": "Verifies deterministic invariants for HashKey Cross-Chain Bridge AI on HashKey Chain."
+        },
+        {
+          "name": "execute_hkbridge_action",
+          "description": "Executes authenticated Bridge state transition."
+        }
+      ]
+    }
+  }
+}
